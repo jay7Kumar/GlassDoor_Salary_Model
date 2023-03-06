@@ -22,3 +22,19 @@ I needed to clean the data so that it can be used for my model. I made the foloo
   AWS
   Excel
 -COlumn for simplified job titles and seniority
+
+# Exploratory Data Analysis
+I looked at the distributions of the data and the value counts for various categorical values. Here are few highlights 
+
+![alt text](https://github.com/jay7Kumar/GlassDoor_Salary_Model/blob/main/Screenshots/Screenshot%202023-03-05%20at%206.03.12%20PM.png)
+![alt text](https://github.com/jay7Kumar/GlassDoor_Salary_Model/blob/main/Screenshots/Screenshot%202023-03-05%20at%206.02.24%20PM.png)
+![alt text](https://github.com/jay7Kumar/GlassDoor_Salary_Model/blob/main/Screenshots/Screenshot%202023-03-05%20at%206.03.28%20PM.png)
+![alt text](https://github.com/jay7Kumar/GlassDoor_Salary_Model/blob/main/Screenshots/Screenshot%202023-03-05%20at%206.04.14%20PM.png)
+![alt text](https://github.com/jay7Kumar/GlassDoor_Salary_Model/blob/main/Screenshots/Screenshot%202023-03-05%20at%206.04.45%20PM.png)
+
+# Model Buillding
+I transformed the categorical variables into dummy variables. I split the data into train and test sets witha test size of 20%
+I tried three different models and evaluated them using Mean Absolute Error. I chose Mean Absolute Error because it is easy to iterpret and outliers arent particularly that bad
+-Multiple Regression : baseline for thr model
+-Lasso Regression : because of the sparse data from many categorical variables. I thought a normalized regression like Lasso will be effective
+-RandomForest Regression : due to sparsity of the data , I thought this would be a good model
